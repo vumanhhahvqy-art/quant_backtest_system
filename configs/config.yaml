@@ -1,0 +1,14 @@
+# CẤU HÌNH CHẠY BACKTEST MẶC ĐỊNH
+backtest:
+  initial_capital: 10000.0       # Vốn khởi điểm (USD)
+  risk_per_trade: 0.01           # Rủi ro tối đa mỗi lệnh (1% vốn)
+  default_symbol: "XAUUSD"       # Cặp giao dịch mặc định
+  timeframe: "H1"                # Khung thời gian: M15, H1, H4, D1
+  start_date: "2023-01-01"
+  end_date: "2026-01-01"
+
+execution:
+  fill_on: "next_open"           # Khớp lệnh tại giá mở cửa nến tiếp theo
+  slippage_points: 2             # Độ trượt giá giả định (points)
+  include_commission: true
+  include_swap: true

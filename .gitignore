@@ -1,0 +1,37 @@
+# Môi trường ảo & Cache Python
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# Dữ liệu nặng & Kết quả chạy (Không đẩy lên Git)
+data/raw/*
+data/processed/*
+reports/runs/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+!reports/runs/.gitkeep
+
+# Biến môi trường nhạy cảm
+.env
+
+# Test, build, and tool caches
+.pytest_cache/
+.coverage
+htmlcov/
+build/
+dist/
+*.egg-info/
+.ruff_cache/
+.mypy_cache/
+.dukascopy-cache/
+/download/
+
+# Local secrets and temporary files
+.env.*
+!.env.example
+*.pem
+*.key
+*.log
+*.tmp

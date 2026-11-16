@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "quant-backtest-system"
+version = "0.1.0"
+description = "Reproducible historical Forex research environment"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "numpy>=1.26,<3",
+    "pandas>=2.2,<4",
+    "PyYAML>=6.0.1,<7",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<10"]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["core", "core.*", "indicators", "indicators.*", "strategies", "strategies.*"]
+namespaces = false
+
+[tool.pytest.ini_options]
+minversion = "8.0"
+testpaths = ["tests"]
+addopts = "-ra --strict-config --strict-markers"

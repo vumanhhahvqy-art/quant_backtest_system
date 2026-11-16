@@ -1,0 +1,32 @@
+{
+    "XAUUSD": {
+        "asset_class": "commodity",
+        "description": "Gold vs US Dollar",
+        "contract_size": 100000,
+        "pip_value": 0.0001,
+        "point_value": 1e-05,
+        "typical_spread_points": 20,
+        "commission_per_lot": 7.0,
+        "min_lot": 0.01
+    },
+    "EURUSD": {
+        "asset_class": "forex",
+        "description": "Euro vs US Dollar",
+        "contract_size": 100000,
+        "pip_value": 0.0001,
+        "point_value": 1e-05,
+        "typical_spread_points": 10,
+        "commission_per_lot": 7.0,
+        "min_lot": 0.01
+    },
+    "BTCUSDT": {
+        "asset_class": "crypto",
+        "description": "Bitcoin Perpetual / Spot",
+        "contract_size": 1,
+        "pip_value": 1.0,
+        "point_value": 0.01,
+        "maker_fee_pct": 0.0002,
+        "taker_fee_pct": 0.0005,
+        "min_lot": 0.001
+    }
+}
