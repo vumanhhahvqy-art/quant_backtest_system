@@ -1,0 +1,250 @@
+{
+  "CORE-F2a_exact_touch_float": {
+    "k=2": "0/4286 exact-touch SL comparisons evaluate False",
+    "k=4": "1752/4286 exact-touch SL comparisons evaluate False",
+    "k=10": "0/4286 exact-touch SL comparisons evaluate False",
+    "k=16": "0/4286 exact-touch SL comparisons evaluate False"
+  },
+  "CORE-F2b_tick_rounding_large_price": {
+    "BTC_scale_buy_moved_1tick": "0/2000",
+    "BTC_scale_sell_moved_1tick": "0/2000",
+    "EURUSD_scale_buy_moved": "0/20000",
+    "XAU_scale_buy_moved": "0/20000"
+  },
+  "CORE-F3_gap_entry_rejected": {
+    "events": [
+      {
+        "order_id": 1,
+        "timestamp": "2024-01-01 01:00:00+00:00",
+        "status": "rejected",
+        "reason": "SL/TP must bracket the actual entry price."
+      }
+    ],
+    "fills": 0,
+    "trades": 0,
+    "has_rejection_counter": false,
+    "final_equity": 10000.0
+  },
+  "CORE-F4_strategy_reuse": {
+    "run1_fills": 1,
+    "run2_fills": 0,
+    "identical": false
+  },
+  "CORE-F5_provenance_keys": {
+    "keys": [
+      "account_currency",
+      "ambiguity",
+      "collateral",
+      "conversion",
+      "costs",
+      "execution",
+      "full_calendar_verified",
+      "gap_check_mode",
+      "hypothetical",
+      "initial_capital",
+      "interval_analysis",
+      "intraday_gap_check_passed",
+      "metadata",
+      "open_positions",
+      "quantity",
+      "warnings"
+    ],
+    "missing": [
+      "data_sha256",
+      "strategy",
+      "strategy_params",
+      "library_versions",
+      "git_commit"
+    ]
+  },
+  "CORE-F7_excess_spread_error_context": {
+    "message": "executable price must be finite and positive.",
+    "mentions_timestamp": false
+  },
+  "CORE-F7b_programming_error_swallowed_as_rejection": [
+    {
+      "order_id": 1,
+      "timestamp": "2024-01-01 01:00:00+00:00",
+      "status": "rejected",
+      "reason": "Insufficient capital for full-notional collateral and commission."
+    }
+  ],
+  "NEW-SELL_while_long_does_not_reverse": {
+    "events": [
+      [
+        "submitted",
+        "BUY"
+      ],
+      [
+        "filled",
+        "BUY"
+      ],
+      [
+        "submitted",
+        "SELL"
+      ],
+      [
+        "rejected",
+        "position_already_open"
+      ]
+    ],
+    "open_position_dir": 1
+  },
+  "NEW-level_signal_spam_orders": {
+    "bars": 500,
+    "orders": 500,
+    "fills": 1,
+    "rejected_events": 498
+  },
+  "NEW-bool_and_float_signal_accepted": {
+    "True": "accepted, orders=4",
+    "1.0": "accepted, orders=4",
+    "np.int64(1)": "accepted, orders=4",
+    "np.int64 history limit": "rejected: signal_history_limit must be a positive integer or None."
+  },
+  "NEW-future_column_passthrough_to_strategy": {
+    "engine_raised": false,
+    "trades": 149,
+    "winning": 102,
+    "validate_flags_extra_column": false
+  },
+  "NEW-ConversionRates_semantics": {
+    "at(bar1 open)": 1.2,
+    "note": "returns value stamped at the open instant; if series is close-of-bar labelled by open, this is the bar's own future close"
+  },
+  "SYS-engine_prefix_invariance_random_k": {
+    "trades": 6,
+    "violations": []
+  },
+  "SYS-account_invariants_random_20k": {
+    "bars": 20000,
+    "orders": 2644,
+    "fills": 1809,
+    "trades": 904,
+    "exit_reasons": {
+      "stop_loss": 373,
+      "EXIT": 317,
+      "take_profit": 214
+    },
+    "ambiguous_exits": 0,
+    "violations": [],
+    "max_drawdown": -0.001732453050478866,
+    "warnings": [
+      "Potential missing intraday candles detected; warning only under the simple UTC-day gap policy.",
+      "Volume column absent; volume is optional for OHLC validation."
+    ],
+    "rerun_identical": true,
+    "rejections": {
+      "position_already_open": 1145,
+      "no_open_position": 276
+    }
+  },
+  "SYS-close_labelled_fill_timing": {
+    "order_submitted": "2024-01-01 00:00:00+00:00",
+    "fill_ts": "2024-01-01 00:00:00+00:00",
+    "fill_price": 102.0,
+    "state0_ts": "2024-01-01 00:00:00+00:00"
+  },
+  "CORE-F6_state_timestamp_offset_open_label": {
+    "data_index0": "2024-01-01 00:00:00+00:00",
+    "states0_ts": "2024-01-01 01:00:00+00:00"
+  },
+  "SYS-result_equality_with_nan_assumption": {
+    "equal": true
+  },
+  "DATA-1_off_grid": {
+    "mixed_offgrid_ready": true,
+    "warnings": [
+      "Potential missing intraday candles detected; warning only under the simple UTC-day gap policy.",
+      "Some timestamp intervals are not multiples of the declared timeframe.",
+      "Volume column absent; volume is optional for OHLC validation."
+    ],
+    "uniform_offset_ready": true,
+    "uniform_offset_warnings": [
+      "Volume column absent; volume is optional for OHLC validation."
+    ],
+    "engine_accepts_offgrid": true
+  },
+  "DATA-2_bad_token_nondiagnostic_and_engine_gate": {
+    "load_csv_returned": true,
+    "close_nan_count": 1,
+    "engine": "engine blocked: Data is not simulation-ready: {'row_count': 2, 'errors': {'close_missing_or_non_numeric': {'count': 1, 'example_data_row"
+  },
+  "DATA-4_write_json_partial_file": {
+    "file_left_behind": true,
+    "size": 21
+  },
+  "DATA-5_timeframe_H1": "raises ValueError: could not convert string to float: '.'",
+  "DATA-6_fractional_epoch": {
+    "parsed": "2024-01-02 00:00:00.000500+00:00",
+    "invalid_count": 0
+  },
+  "DATA-3_real_metadata_into_engine": {
+    "EURUSD": "blocked (15 blockers): Unconfirmed metadata: source; Unconfirmed metadata: symbol; Unconfirmed metadata: source_timezone; Unconfirmed metadata: timestamp_encoding; Unconfirmed metadata: timestamp_kind; Unconfirmed metadata:",
+    "XAUUSD": "blocked (15 blockers): Unconfirmed metadata: source; Unconfirmed metadata: symbol; Unconfirmed metadata: source_timezone; Unconfirmed metadata: timestamp_encoding; Unconfirmed metadata: timestamp_kind; Unconfirmed metadata:"
+  },
+  "IND-1_session_membership_labels": {
+    "active": [
+      false,
+      true,
+      true,
+      false
+    ],
+    "if_close_labels_expected": [
+      false,
+      false,
+      true,
+      true
+    ],
+    "if_open_labels_expected": [
+      false,
+      true,
+      true,
+      false
+    ]
+  },
+  "IND-4_default_tolerance_masks_1tick_leak": {
+    "sub_tolerance_leak": "PASSED (leak undetected)",
+    "len1": "returned None (PASS) for 1-row input",
+    "empty_cutoffs": "returned None (PASS) for empty cutoffs",
+    "reversed": "PASSED on reversed (non-chronological) index",
+    "captured_state": "PASSED with captured full-sample mean (expected limitation)",
+    "numpy_cutoffs": "np.int64 cutoffs rejected: Causality cutoffs must be integers inside the sample."
+  },
+  "IND-5_flat_window_inexact_price": {
+    "percent_b_last": [
+      null,
+      null,
+      null
+    ],
+    "bandwidth_last": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "cci_last": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "rolling_std_last": 0.0
+  },
+  "IND-6_monday_previous_day_from_sunday_fragment": {
+    "monday_prev_high": 109.8,
+    "cols": [
+      "high",
+      "low",
+      "close"
+    ],
+    "monday_row": {
+      "high": 109.8,
+      "low": 109.3,
+      "close": 109.6
+    },
+    "friday_high": 110.2
+  },
+  "IND-7_param_validation": {
+    "sma_np_int64": "rejected: ValueError",
+    "bollinger_dev_nan": "accepted, all-NaN upper=True"
+  }
+}

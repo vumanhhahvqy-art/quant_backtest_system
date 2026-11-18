@@ -4,7 +4,9 @@ Hệ thống nghiên cứu và mô phỏng chiến lược trên dữ liệu For
 Kết quả mô phỏng mang tính giả định và không bảo đảm lợi nhuận tương lai.
 
 Giai đoạn 1 thiết lập môi trường Python, quản lý phụ thuộc và kiểm tra môi trường.
-Các file khung có sẵn được giữ nguyên; chưa triển khai chiến lược, engine hoặc chạy backtest.
+Giai đoạn 4 bổ sung engine mô phỏng một công cụ với lệnh thị trường ở nến kế tiếp,
+SL/TP, chi phí và sổ tài khoản. Xem [quy ước engine](core/BACKTEST_ENGINE.md) để
+biết giao diện API, công thức tính tay và các giới hạn hỗ trợ.
 
 ## Yêu cầu
 

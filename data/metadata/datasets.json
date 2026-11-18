@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "description": "Every CSV in data/raw must have exactly one entry. Dataset-specific values override metadata_template.yaml.",
+  "metadata_template": "metadata_template.yaml",
+  "datasets": [
+    {
+      "filename": "eurusd-m1-bid-2023-01-01-2026-11-15.csv",
+      "symbol_hint": "EURUSD",
+      "metadata_overrides": {
+        "symbol": {"value": "EURUSD", "confirmed": false, "evidence": "Filename hint only"},
+        "instrument_specifications": {"value": {"point_size": 0.00001, "pip_size": 0.0001}, "confirmed": false, "evidence": "Point and pip confirmed by user; remaining specifications unresolved"},
+        "instrument_specification_confirmations": {
+          "point_size": {"value": 0.00001, "confirmed": true, "evidence": "User confirmed EURUSD point = 0.00001; 1 pip = 10 points"},
+          "pip_size": {"value": 0.0001, "confirmed": true, "evidence": "User confirmed EURUSD pip = 0.0001"}
+        }
+      }
+    },
+    {
+      "filename": "xauusd-m1-bid-2023-01-01-2026-11-15.csv",
+      "symbol_hint": "XAUUSD",
+      "metadata_overrides": {
+        "symbol": {"value": "XAUUSD", "confirmed": false, "evidence": "Filename hint only"},
+        "instrument_specifications": {"value": {"point_size": 0.001, "pip_size": 0.01}, "confirmed": false, "evidence": "Point and pip confirmed by user; remaining specifications unresolved"},
+        "instrument_specification_confirmations": {
+          "point_size": {"value": 0.001, "confirmed": true, "evidence": "User confirmed XAUUSD point = 0.001; 1 pip = 10 points"},
+          "pip_size": {"value": 0.01, "confirmed": true, "evidence": "User confirmed XAUUSD pip = 0.01"}
+        }
+      }
+    }
+  ]
+}

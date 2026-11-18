@@ -1,0 +1,32 @@
+{
+  "probes.py": {
+    "original_path": "C:\\Users\\Admin\\.gemini\\antigravity\\brain\\7022fcc8-43b1-4837-9f65-458cfcebf9d9\\scratch\\probes.py",
+    "sha256": "46c6b538afe23910109ce76787e0a95d6e5b92c46ae590f3bac7090d08f9f45c",
+    "copy_sha256": "46c6b538afe23910109ce76787e0a95d6e5b92c46ae590f3bac7090d08f9f45c"
+  },
+  "probes2.py": {
+    "original_path": "C:\\Users\\Admin\\.gemini\\antigravity\\brain\\7022fcc8-43b1-4837-9f65-458cfcebf9d9\\scratch\\probes2.py",
+    "sha256": "592b2fb31ad716924c9164e597069eb4cdac9b0187e25abd244afbbbca1dbb48",
+    "copy_sha256": "592b2fb31ad716924c9164e597069eb4cdac9b0187e25abd244afbbbca1dbb48"
+  },
+  "probe_results.json": {
+    "original_path": "C:\\Users\\Admin\\.gemini\\antigravity\\brain\\7022fcc8-43b1-4837-9f65-458cfcebf9d9\\scratch\\probe_results.json",
+    "sha256": "10fb639a2543c6b6f8d4ac9568f0f1eb2348a585bd09fae5d1d3f8b3b36eab0e",
+    "copy_sha256": "10fb639a2543c6b6f8d4ac9568f0f1eb2348a585bd09fae5d1d3f8b3b36eab0e"
+  },
+  "perf.py": {
+    "original_path": "C:\\Users\\Admin\\.gemini\\antigravity\\brain\\7022fcc8-43b1-4837-9f65-458cfcebf9d9\\scratch\\perf.py",
+    "sha256": "70a6dda1d277cd80250a0b6e310ec99e4527e38700d88fe1df6edd5887d419c9",
+    "copy_sha256": "70a6dda1d277cd80250a0b6e310ec99e4527e38700d88fe1df6edd5887d419c9"
+  },
+  "perf_results.jsonl": {
+    "original_path": "C:\\Users\\Admin\\.gemini\\antigravity\\brain\\7022fcc8-43b1-4837-9f65-458cfcebf9d9\\scratch\\perf_results.jsonl",
+    "sha256": "309f6ef18b31c735a5f0deb845b6d4d5c23e4400377016da229302455a454fbd",
+    "copy_sha256": "309f6ef18b31c735a5f0deb845b6d4d5c23e4400377016da229302455a454fbd"
+  },
+  "perf_results_large.jsonl": {
+    "original_path": "C:\\Users\\Admin\\.gemini\\antigravity\\brain\\7022fcc8-43b1-4837-9f65-458cfcebf9d9\\scratch\\perf_results_large.jsonl",
+    "sha256": "c9ed26769da1871f83b8d8e6c406c1589e1b1ea2690e3ce87692e590ed69c7ba",
+    "copy_sha256": "c9ed26769da1871f83b8d8e6c406c1589e1b1ea2690e3ce87692e590ed69c7ba"
+  }
+}

@@ -1,0 +1,326 @@
+[
+  {
+    "path": ".clinerules/01-project.md",
+    "expected": "bab5fd7c934dbafc9b5fdd01ca99decb1dee343bfb80d2adf5bfbaeeac7df7ff",
+    "actual": "bab5fd7c934dbafc9b5fdd01ca99decb1dee343bfb80d2adf5bfbaeeac7df7ff",
+    "status": "MATCH"
+  },
+  {
+    "path": ".clinerules/02-architecture.md",
+    "expected": "661c1dabf0208252c754728ea662a541453c4eda95ca3e1951aeabb2545ef5e8",
+    "actual": "661c1dabf0208252c754728ea662a541453c4eda95ca3e1951aeabb2545ef5e8",
+    "status": "MATCH"
+  },
+  {
+    "path": ".clinerules/03-backtest-rules.md",
+    "expected": "05b47622a0f36bf43e937e53c1cadbd5d8c69e7f8fd3441e32e7fe3adff050b0",
+    "actual": "05b47622a0f36bf43e937e53c1cadbd5d8c69e7f8fd3441e32e7fe3adff050b0",
+    "status": "MATCH"
+  },
+  {
+    "path": ".clinerules/04-coding-standards.md",
+    "expected": "abbb028656ba48d3cd76c260c90292d02e19dc0ef49a07a78796cef19c76e586",
+    "actual": "abbb028656ba48d3cd76c260c90292d02e19dc0ef49a07a78796cef19c76e586",
+    "status": "MATCH"
+  },
+  {
+    "path": ".gitignore",
+    "expected": "be0d2f36340d702fbc07a7480d90153cf4d8c90953753674dec5e1799759b325",
+    "actual": "be0d2f36340d702fbc07a7480d90153cf4d8c90953753674dec5e1799759b325",
+    "status": "MATCH"
+  },
+  {
+    "path": ".vscode/settings.json",
+    "expected": "b3f38d5469db454a51c0c705ae9160a4e133df1f23c19f7086cce7169a544aa9",
+    "actual": "b3f38d5469db454a51c0c705ae9160a4e133df1f23c19f7086cce7169a544aa9",
+    "status": "MATCH"
+  },
+  {
+    "path": "README.md",
+    "expected": "9c4081319675161b9283a6d61e08a4e92711c6818bd5c050112b22e68d6677f8",
+    "actual": "9c4081319675161b9283a6d61e08a4e92711c6818bd5c050112b22e68d6677f8",
+    "status": "MATCH"
+  },
+  {
+    "path": "benchmark_engine.py",
+    "expected": "cd05b5f735df19d816d32ad9e155bdd8331194ec52d73322d4844f5cc1b21e34",
+    "actual": "cd05b5f735df19d816d32ad9e155bdd8331194ec52d73322d4844f5cc1b21e34",
+    "status": "MATCH"
+  },
+  {
+    "path": "configs/config.yaml",
+    "expected": "2cc5306a3d1c2936082d016558d8f08b7b79f90386ed41487382b73cd4036a53",
+    "actual": "2cc5306a3d1c2936082d016558d8f08b7b79f90386ed41487382b73cd4036a53",
+    "status": "MATCH"
+  },
+  {
+    "path": "configs/data_pipeline.yaml",
+    "expected": "29aaaf776797b23b37c8fcd1bb8aca53eaf4c9888770d26b77aae23a150111cc",
+    "actual": "29aaaf776797b23b37c8fcd1bb8aca53eaf4c9888770d26b77aae23a150111cc",
+    "status": "MATCH"
+  },
+  {
+    "path": "core/BACKTEST_ENGINE.md",
+    "expected": "48963307de96476d1010ef50a79881391177bdde159ced0a6341991f871dc672",
+    "actual": "48963307de96476d1010ef50a79881391177bdde159ced0a6341991f871dc672",
+    "status": "MATCH"
+  },
+  {
+    "path": "core/__init__.py",
+    "expected": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "actual": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "status": "MATCH"
+  },
+  {
+    "path": "core/causality.py",
+    "expected": "fe7fa61ef157e6ec5df20932e917380a144dba932e42c5f14f03af4c14b82afc",
+    "actual": "fe7fa61ef157e6ec5df20932e917380a144dba932e42c5f14f03af4c14b82afc",
+    "status": "MATCH"
+  },
+  {
+    "path": "core/cost_model.py",
+    "expected": "b8e12db3ae11c56f9ca9c0521e8ab24d6bda4595c4f9b24db07149f72a1178fc",
+    "actual": "b8e12db3ae11c56f9ca9c0521e8ab24d6bda4595c4f9b24db07149f72a1178fc",
+    "status": "MATCH"
+  },
+  {
+    "path": "core/data_loader.py",
+    "expected": "82973a19cc0fca229accd3517c331d99983cdf076b4d786f4f2a14c28e793d11",
+    "actual": "82973a19cc0fca229accd3517c331d99983cdf076b4d786f4f2a14c28e793d11",
+    "status": "MATCH"
+  },
+  {
+    "path": "core/data_manager.py",
+    "expected": "df7b63964ada00c56fca5f763a24e2152a282649a57871e8c1f397423be43e8c",
+    "actual": "df7b63964ada00c56fca5f763a24e2152a282649a57871e8c1f397423be43e8c",
+    "status": "MATCH"
+  },
+  {
+    "path": "core/data_validator.py",
+    "expected": "99d379352c38a509765d0e0fc7a73b77508bde9e2946cb3f7b467aad749449c4",
+    "actual": "99d379352c38a509765d0e0fc7a73b77508bde9e2946cb3f7b467aad749449c4",
+    "status": "MATCH"
+  },
+  {
+    "path": "core/engine.py",
+    "expected": "b2e35f439025d9b932dec9a8a94c00e94b3317df965c282cfe4c6335bc46880b",
+    "actual": "b2e35f439025d9b932dec9a8a94c00e94b3317df965c282cfe4c6335bc46880b",
+    "status": "MATCH"
+  },
+  {
+    "path": "core/execution.py",
+    "expected": "fdd5262964943c0b9e817f3857b088af6b675dc0026f5dd853d10c0bcff1628e",
+    "actual": "fdd5262964943c0b9e817f3857b088af6b675dc0026f5dd853d10c0bcff1628e",
+    "status": "MATCH"
+  },
+  {
+    "path": "core/metrics.py",
+    "expected": "1bda281456baf27201e2cc167010aa01b2feb35b5f107b0ed2be9e80b0412317",
+    "actual": "1bda281456baf27201e2cc167010aa01b2feb35b5f107b0ed2be9e80b0412317",
+    "status": "MATCH"
+  },
+  {
+    "path": "core/models.py",
+    "expected": "81c2b36789871376a1e39f68dc0980f1bb676be14c153fa2bee2f3f1b14df79d",
+    "actual": "81c2b36789871376a1e39f68dc0980f1bb676be14c153fa2bee2f3f1b14df79d",
+    "status": "MATCH"
+  },
+  {
+    "path": "core/portfolio.py",
+    "expected": "7f5c0d55cd3b454fdf1e34101b40cbcf398de0a06d1ef1104c93860cf01c3d24",
+    "actual": "7f5c0d55cd3b454fdf1e34101b40cbcf398de0a06d1ef1104c93860cf01c3d24",
+    "status": "MATCH"
+  },
+  {
+    "path": "data/metadata/datasets.json",
+    "expected": "7e628dc9a7cfa90a71b287434e71f36d7d03aef4b4350f5de38853cd46dc5ffc",
+    "actual": "7e628dc9a7cfa90a71b287434e71f36d7d03aef4b4350f5de38853cd46dc5ffc",
+    "status": "MATCH"
+  },
+  {
+    "path": "data/metadata/metadata_template.yaml",
+    "expected": "d3609fd78dd00c8e74da0b2400063c58517f20beedeb8504f96412596afeb80c",
+    "actual": "d3609fd78dd00c8e74da0b2400063c58517f20beedeb8504f96412596afeb80c",
+    "status": "MATCH"
+  },
+  {
+    "path": "data/metadata/symbols.json",
+    "expected": "c02e3acb85953637e0eb377b2a017512746a1b28ad135f6b30884a4fd41eadff",
+    "actual": "c02e3acb85953637e0eb377b2a017512746a1b28ad135f6b30884a4fd41eadff",
+    "status": "MATCH"
+  },
+  {
+    "path": "indicators/INDICATORS.md",
+    "expected": "2461a9e586cc8c01194587f73e396e14c90ec579e5900556dafb38bf69103ff8",
+    "actual": "2461a9e586cc8c01194587f73e396e14c90ec579e5900556dafb38bf69103ff8",
+    "status": "MATCH"
+  },
+  {
+    "path": "indicators/__init__.py",
+    "expected": "976c65f4c859b580916dacd575b21a7f2d7a394c4aea601e48b3d7a3828cb724",
+    "actual": "976c65f4c859b580916dacd575b21a7f2d7a394c4aea601e48b3d7a3828cb724",
+    "status": "MATCH"
+  },
+  {
+    "path": "indicators/_utils.py",
+    "expected": "0697022c77e7e6bccf1b63c1a4304c8a6b58ccc26358b1c206a5615f47693f05",
+    "actual": "0697022c77e7e6bccf1b63c1a4304c8a6b58ccc26358b1c206a5615f47693f05",
+    "status": "MATCH"
+  },
+  {
+    "path": "indicators/custom_indicators.py",
+    "expected": "8193340316dd56eddd778f4f064544457598c97763381ce1141383635dcfd6a5",
+    "actual": "8193340316dd56eddd778f4f064544457598c97763381ce1141383635dcfd6a5",
+    "status": "MATCH"
+  },
+  {
+    "path": "indicators/market_structure.py",
+    "expected": "fb8b1238e509b3684c6f929dd6a965201603e76f957a28cea335b9d4efdf7180",
+    "actual": "fb8b1238e509b3684c6f929dd6a965201603e76f957a28cea335b9d4efdf7180",
+    "status": "MATCH"
+  },
+  {
+    "path": "indicators/momentum.py",
+    "expected": "d205f9adb507e4b063492c2580a5fc4c29dde4f6e6324d1b5af515c7f90ec904",
+    "actual": "d205f9adb507e4b063492c2580a5fc4c29dde4f6e6324d1b5af515c7f90ec904",
+    "status": "MATCH"
+  },
+  {
+    "path": "indicators/moving_averages.py",
+    "expected": "e18a302d8c0a87b203d2c9ac56e9051938625cd5910eb1bb4085c086024aaebf",
+    "actual": "e18a302d8c0a87b203d2c9ac56e9051938625cd5910eb1bb4085c086024aaebf",
+    "status": "MATCH"
+  },
+  {
+    "path": "indicators/price_action.py",
+    "expected": "3ba1ca770837f91bed1408ef5cf31f8abfd38b298c33cccf3e7069fff8bd8c0d",
+    "actual": "3ba1ca770837f91bed1408ef5cf31f8abfd38b298c33cccf3e7069fff8bd8c0d",
+    "status": "MATCH"
+  },
+  {
+    "path": "indicators/sessions.py",
+    "expected": "2bc30841a895d433b25813297e9aef7c343ce4a2a21024f4948ea14672794a16",
+    "actual": "2bc30841a895d433b25813297e9aef7c343ce4a2a21024f4948ea14672794a16",
+    "status": "MATCH"
+  },
+  {
+    "path": "indicators/trend.py",
+    "expected": "53860ac974b483809e3bd1b0c18e540f141666e29ac1ffe3e53b88b9505decff",
+    "actual": "53860ac974b483809e3bd1b0c18e540f141666e29ac1ffe3e53b88b9505decff",
+    "status": "MATCH"
+  },
+  {
+    "path": "indicators/volatility.py",
+    "expected": "737f53fcbdf0644ec645bfe2562669b9e21a9ad1a149062698f17f654e59bbd4",
+    "actual": "737f53fcbdf0644ec645bfe2562669b9e21a9ad1a149062698f17f654e59bbd4",
+    "status": "MATCH"
+  },
+  {
+    "path": "inspect_data.py",
+    "expected": "9987700c7c745d27fc1e16ddc710ec2c0f4742c0e6b27743fe03a46e426d49f8",
+    "actual": "9987700c7c745d27fc1e16ddc710ec2c0f4742c0e6b27743fe03a46e426d49f8",
+    "status": "MATCH"
+  },
+  {
+    "path": "inspect_indicators.py",
+    "expected": "c033894bee8c3be300fb31f3d574daa94f513d212a1fa3f98d8dfbd785536125",
+    "actual": "c033894bee8c3be300fb31f3d574daa94f513d212a1fa3f98d8dfbd785536125",
+    "status": "MATCH"
+  },
+  {
+    "path": "pyproject.toml",
+    "expected": "8cc6c6a19958d3254d69361dccd1fdc92ae470f259e1ff88fe3a4f88235cb892",
+    "actual": "8cc6c6a19958d3254d69361dccd1fdc92ae470f259e1ff88fe3a4f88235cb892",
+    "status": "MATCH"
+  },
+  {
+    "path": "run_backtest.py",
+    "expected": "42967f49c9b2640f54332b14bdee8232711a1117218e81023bd17425434a3f28",
+    "actual": "42967f49c9b2640f54332b14bdee8232711a1117218e81023bd17425434a3f28",
+    "status": "MATCH"
+  },
+  {
+    "path": "strategies/__init__.py",
+    "expected": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "actual": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "status": "MATCH"
+  },
+  {
+    "path": "strategies/base_strategy.py",
+    "expected": "f476111d945bf4d50ad9ccac81b8f03f07d822c62aa87a8994a835e24af2eaad",
+    "actual": "f476111d945bf4d50ad9ccac81b8f03f07d822c62aa87a8994a835e24af2eaad",
+    "status": "MATCH"
+  },
+  {
+    "path": "strategies/first_strategy.py",
+    "expected": "f1ebc4e02a4e55fc7f5db75e83a740b0980384b09784f7216a3b3518fc6d963c",
+    "actual": "f1ebc4e02a4e55fc7f5db75e83a740b0980384b09784f7216a3b3518fc6d963c",
+    "status": "MATCH"
+  },
+  {
+    "path": "tests/test_backtest_models.py",
+    "expected": "ecd084d2ca4cb1da762d3010473885569fb81f607b00e2d20c7a01d4a37b481f",
+    "actual": "ecd084d2ca4cb1da762d3010473885569fb81f607b00e2d20c7a01d4a37b481f",
+    "status": "MATCH"
+  },
+  {
+    "path": "tests/test_cost_model.py",
+    "expected": "71936c1a12518f645480ba31b6305091dfada45543440c1f374610485bb38e41",
+    "actual": "71936c1a12518f645480ba31b6305091dfada45543440c1f374610485bb38e41",
+    "status": "MATCH"
+  },
+  {
+    "path": "tests/test_data_loader.py",
+    "expected": "3cc3774987d25aa1206b5c88e5603a7b743ef0a3d7a5915b8cb32edb6084930f",
+    "actual": "3cc3774987d25aa1206b5c88e5603a7b743ef0a3d7a5915b8cb32edb6084930f",
+    "status": "MATCH"
+  },
+  {
+    "path": "tests/test_data_validator.py",
+    "expected": "a34c3fbebae332d582b4152c7ebc7a4e5530845e12d809381d790d953153d1a5",
+    "actual": "a34c3fbebae332d582b4152c7ebc7a4e5530845e12d809381d790d953153d1a5",
+    "status": "MATCH"
+  },
+  {
+    "path": "tests/test_engine.py",
+    "expected": "dea2360ce920923cd6479da095fcd004997301d06c99ae903d0f13e635e84ad7",
+    "actual": "dea2360ce920923cd6479da095fcd004997301d06c99ae903d0f13e635e84ad7",
+    "status": "MATCH"
+  },
+  {
+    "path": "tests/test_environment.py",
+    "expected": "880c51eaf356d9be1c8f8157a2f2ecc2335b64f98cc9fc9b2d1b7ab4b164aa6f",
+    "actual": "880c51eaf356d9be1c8f8157a2f2ecc2335b64f98cc9fc9b2d1b7ab4b164aa6f",
+    "status": "MATCH"
+  },
+  {
+    "path": "tests/test_execution.py",
+    "expected": "c30cbef36f5ff8f6227437f1e706d8319c45a3ba31bd9982a350bfa0161c5a60",
+    "actual": "c30cbef36f5ff8f6227437f1e706d8319c45a3ba31bd9982a350bfa0161c5a60",
+    "status": "MATCH"
+  },
+  {
+    "path": "tests/test_indicators.py",
+    "expected": "9765c5229bf05059e452eec9cb6a592fca2f6277c80783666e84adbc84dd5188",
+    "actual": "9765c5229bf05059e452eec9cb6a592fca2f6277c80783666e84adbc84dd5188",
+    "status": "MATCH"
+  },
+  {
+    "path": "tests/test_intraday_gaps.py",
+    "expected": "519e1e8d0a60fa174af2b8280b3921750fd0b1bd29fd3f0b3f154323ca5a0c57",
+    "actual": "519e1e8d0a60fa174af2b8280b3921750fd0b1bd29fd3f0b3f154323ca5a0c57",
+    "status": "MATCH"
+  },
+  {
+    "path": "tests/test_portfolio.py",
+    "expected": "d0b990946cfdb10b8d56acf7b6f705ec4e74c7965c5f78386385b9a158dafa4c",
+    "actual": "d0b990946cfdb10b8d56acf7b6f705ec4e74c7965c5f78386385b9a158dafa4c",
+    "status": "MATCH"
+  },
+  {
+    "path": "tests/test_stage4_review.py",
+    "expected": "611717b706e4ff73e8a6f2a15e3d217aff2c1327517e4caf2ea0e60c081d6d0c",
+    "actual": "611717b706e4ff73e8a6f2a15e3d217aff2c1327517e4caf2ea0e60c081d6d0c",
+    "status": "MATCH"
+  }
+]

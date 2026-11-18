@@ -1,0 +1,24 @@
+schema_version: 1
+
+# One shared schema for every dataset. Dataset-specific values belong in datasets.json.
+source: {value: null, confirmed: false, evidence: null}
+symbol: {value: null, confirmed: false, evidence: null}
+source_timezone: {value: null, confirmed: false, evidence: null}
+timestamp_encoding: {value: unix_ms, confirmed: false, evidence: Diagnostic hypothesis only}
+timestamp_kind: {value: null, confirmed: false, evidence: null}
+price_type: {value: null, confirmed: false, evidence: null}
+timeframe: {value: null, confirmed: false, evidence: null}
+instrument_specifications:
+  value:
+    point_size: null
+    tick_size: null
+    pip_size: null
+    contract_size: null
+    quantity_unit: null
+    quote_currency: null
+    minimum_quantity_increment: null
+  confirmed: false
+  evidence: null
+instrument_specification_confirmations: {}
+volume_unit: {value: null, confirmed: false, evidence: null}
+trading_calendar: {value: null, confirmed: false, evidence: null}

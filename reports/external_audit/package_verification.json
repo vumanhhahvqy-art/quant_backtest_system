@@ -1,0 +1,509 @@
+{
+  "created_utc": "2026-11-17T09:37:17.454181+00:00",
+  "source_count": 54,
+  "verbatim_blocks_verified": 54,
+  "uncovered_sources": [],
+  "duplicate_sources": [],
+  "sources": [
+    {
+      "path": "README.md",
+      "package": "00_PROJECT_OVERVIEW.md",
+      "bytes": 5310,
+      "sha256": "9c4081319675161b9283a6d61e08a4e92711c6818bd5c050112b22e68d6677f8",
+      "exact_match": true
+    },
+    {
+      "path": "pyproject.toml",
+      "package": "00_PROJECT_OVERVIEW.md",
+      "bytes": 726,
+      "sha256": "8cc6c6a19958d3254d69361dccd1fdc92ae470f259e1ff88fe3a4f88235cb892",
+      "exact_match": true
+    },
+    {
+      "path": "run_backtest.py",
+      "package": "00_PROJECT_OVERVIEW.md",
+      "bytes": 288,
+      "sha256": "42967f49c9b2640f54332b14bdee8232711a1117218e81023bd17425434a3f28",
+      "exact_match": true
+    },
+    {
+      "path": ".gitignore",
+      "package": "00_PROJECT_OVERVIEW.md",
+      "bytes": 579,
+      "sha256": "be0d2f36340d702fbc07a7480d90153cf4d8c90953753674dec5e1799759b325",
+      "exact_match": true
+    },
+    {
+      "path": ".vscode/settings.json",
+      "package": "00_PROJECT_OVERVIEW.md",
+      "bytes": 68,
+      "sha256": "b3f38d5469db454a51c0c705ae9160a4e133df1f23c19f7086cce7169a544aa9",
+      "exact_match": true
+    },
+    {
+      "path": ".clinerules/01-project.md",
+      "package": "00B_PROJECT_RULES.md",
+      "bytes": 4394,
+      "sha256": "bab5fd7c934dbafc9b5fdd01ca99decb1dee343bfb80d2adf5bfbaeeac7df7ff",
+      "exact_match": true
+    },
+    {
+      "path": ".clinerules/02-architecture.md",
+      "package": "00B_PROJECT_RULES.md",
+      "bytes": 8448,
+      "sha256": "661c1dabf0208252c754728ea662a541453c4eda95ca3e1951aeabb2545ef5e8",
+      "exact_match": true
+    },
+    {
+      "path": ".clinerules/03-backtest-rules.md",
+      "package": "00B_PROJECT_RULES.md",
+      "bytes": 9474,
+      "sha256": "05b47622a0f36bf43e937e53c1cadbd5d8c69e7f8fd3441e32e7fe3adff050b0",
+      "exact_match": true
+    },
+    {
+      "path": ".clinerules/04-coding-standards.md",
+      "package": "00B_PROJECT_RULES.md",
+      "bytes": 8057,
+      "sha256": "abbb028656ba48d3cd76c260c90292d02e19dc0ef49a07a78796cef19c76e586",
+      "exact_match": true
+    },
+    {
+      "path": "core/models.py",
+      "package": "01_CORE_AUDIT.md",
+      "bytes": 5714,
+      "sha256": "81c2b36789871376a1e39f68dc0980f1bb676be14c153fa2bee2f3f1b14df79d",
+      "exact_match": true
+    },
+    {
+      "path": "core/execution.py",
+      "package": "01_CORE_AUDIT.md",
+      "bytes": 1401,
+      "sha256": "fdd5262964943c0b9e817f3857b088af6b675dc0026f5dd853d10c0bcff1628e",
+      "exact_match": true
+    },
+    {
+      "path": "core/cost_model.py",
+      "package": "01_CORE_AUDIT.md",
+      "bytes": 2746,
+      "sha256": "b8e12db3ae11c56f9ca9c0521e8ab24d6bda4595c4f9b24db07149f72a1178fc",
+      "exact_match": true
+    },
+    {
+      "path": "core/portfolio.py",
+      "package": "01_CORE_AUDIT.md",
+      "bytes": 3954,
+      "sha256": "7f5c0d55cd3b454fdf1e34101b40cbcf398de0a06d1ef1104c93860cf01c3d24",
+      "exact_match": true
+    },
+    {
+      "path": "core/engine.py",
+      "package": "01_CORE_AUDIT.md",
+      "bytes": 12934,
+      "sha256": "b2e35f439025d9b932dec9a8a94c00e94b3317df965c282cfe4c6335bc46880b",
+      "exact_match": true
+    },
+    {
+      "path": "strategies/base_strategy.py",
+      "package": "01_CORE_AUDIT.md",
+      "bytes": 1769,
+      "sha256": "f476111d945bf4d50ad9ccac81b8f03f07d822c62aa87a8994a835e24af2eaad",
+      "exact_match": true
+    },
+    {
+      "path": "core/BACKTEST_ENGINE.md",
+      "package": "01_CORE_AUDIT.md",
+      "bytes": 14292,
+      "sha256": "48963307de96476d1010ef50a79881391177bdde159ced0a6341991f871dc672",
+      "exact_match": true
+    },
+    {
+      "path": "core/__init__.py",
+      "package": "01_CORE_AUDIT.md",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "exact_match": true
+    },
+    {
+      "path": "core/data_loader.py",
+      "package": "02_DATA_AUDIT.md",
+      "bytes": 10823,
+      "sha256": "82973a19cc0fca229accd3517c331d99983cdf076b4d786f4f2a14c28e793d11",
+      "exact_match": true
+    },
+    {
+      "path": "core/data_validator.py",
+      "package": "02_DATA_AUDIT.md",
+      "bytes": 10363,
+      "sha256": "99d379352c38a509765d0e0fc7a73b77508bde9e2946cb3f7b467aad749449c4",
+      "exact_match": true
+    },
+    {
+      "path": "core/data_manager.py",
+      "package": "02_DATA_AUDIT.md",
+      "bytes": 112,
+      "sha256": "df7b63964ada00c56fca5f763a24e2152a282649a57871e8c1f397423be43e8c",
+      "exact_match": true
+    },
+    {
+      "path": "inspect_data.py",
+      "package": "02_DATA_AUDIT.md",
+      "bytes": 6421,
+      "sha256": "9987700c7c745d27fc1e16ddc710ec2c0f4742c0e6b27743fe03a46e426d49f8",
+      "exact_match": true
+    },
+    {
+      "path": "configs/config.yaml",
+      "package": "02_DATA_AUDIT.md",
+      "bytes": 624,
+      "sha256": "2cc5306a3d1c2936082d016558d8f08b7b79f90386ed41487382b73cd4036a53",
+      "exact_match": true
+    },
+    {
+      "path": "configs/data_pipeline.yaml",
+      "package": "02_DATA_AUDIT.md",
+      "bytes": 323,
+      "sha256": "29aaaf776797b23b37c8fcd1bb8aca53eaf4c9888770d26b77aae23a150111cc",
+      "exact_match": true
+    },
+    {
+      "path": "data/metadata/datasets.json",
+      "package": "02_DATA_AUDIT.md",
+      "bytes": 1718,
+      "sha256": "7e628dc9a7cfa90a71b287434e71f36d7d03aef4b4350f5de38853cd46dc5ffc",
+      "exact_match": true
+    },
+    {
+      "path": "data/metadata/metadata_template.yaml",
+      "package": "02_DATA_AUDIT.md",
+      "bytes": 994,
+      "sha256": "d3609fd78dd00c8e74da0b2400063c58517f20beedeb8504f96412596afeb80c",
+      "exact_match": true
+    },
+    {
+      "path": "data/metadata/symbols.json",
+      "package": "02_DATA_AUDIT.md",
+      "bytes": 893,
+      "sha256": "c02e3acb85953637e0eb377b2a017512746a1b28ad135f6b30884a4fd41eadff",
+      "exact_match": true
+    },
+    {
+      "path": "indicators/INDICATORS.md",
+      "package": "03_INDICATORS_AUDIT.md",
+      "bytes": 15348,
+      "sha256": "2461a9e586cc8c01194587f73e396e14c90ec579e5900556dafb38bf69103ff8",
+      "exact_match": true
+    },
+    {
+      "path": "indicators/_utils.py",
+      "package": "03_INDICATORS_AUDIT.md",
+      "bytes": 2419,
+      "sha256": "0697022c77e7e6bccf1b63c1a4304c8a6b58ccc26358b1c206a5615f47693f05",
+      "exact_match": true
+    },
+    {
+      "path": "indicators/__init__.py",
+      "package": "03_INDICATORS_AUDIT.md",
+      "bytes": 385,
+      "sha256": "976c65f4c859b580916dacd575b21a7f2d7a394c4aea601e48b3d7a3828cb724",
+      "exact_match": true
+    },
+    {
+      "path": "indicators/custom_indicators.py",
+      "package": "03_INDICATORS_AUDIT.md",
+      "bytes": 108,
+      "sha256": "8193340316dd56eddd778f4f064544457598c97763381ce1141383635dcfd6a5",
+      "exact_match": true
+    },
+    {
+      "path": "indicators/moving_averages.py",
+      "package": "03A_INDICATORS_TREND.md",
+      "bytes": 2280,
+      "sha256": "e18a302d8c0a87b203d2c9ac56e9051938625cd5910eb1bb4085c086024aaebf",
+      "exact_match": true
+    },
+    {
+      "path": "indicators/trend.py",
+      "package": "03A_INDICATORS_TREND.md",
+      "bytes": 8659,
+      "sha256": "53860ac974b483809e3bd1b0c18e540f141666e29ac1ffe3e53b88b9505decff",
+      "exact_match": true
+    },
+    {
+      "path": "indicators/momentum.py",
+      "package": "03B_INDICATORS_MOMENTUM.md",
+      "bytes": 5488,
+      "sha256": "d205f9adb507e4b063492c2580a5fc4c29dde4f6e6324d1b5af515c7f90ec904",
+      "exact_match": true
+    },
+    {
+      "path": "indicators/volatility.py",
+      "package": "03C_INDICATORS_VOLATILITY.md",
+      "bytes": 5186,
+      "sha256": "737f53fcbdf0644ec645bfe2562669b9e21a9ad1a149062698f17f654e59bbd4",
+      "exact_match": true
+    },
+    {
+      "path": "indicators/market_structure.py",
+      "package": "03D_INDICATORS_STRUCTURE.md",
+      "bytes": 10174,
+      "sha256": "fb8b1238e509b3684c6f929dd6a965201603e76f957a28cea335b9d4efdf7180",
+      "exact_match": true
+    },
+    {
+      "path": "indicators/price_action.py",
+      "package": "03E_INDICATORS_PRICE_ACTION.md",
+      "bytes": 7330,
+      "sha256": "3ba1ca770837f91bed1408ef5cf31f8abfd38b298c33cccf3e7069fff8bd8c0d",
+      "exact_match": true
+    },
+    {
+      "path": "indicators/sessions.py",
+      "package": "03F_INDICATORS_SESSIONS_VOLUME.md",
+      "bytes": 10890,
+      "sha256": "2bc30841a895d433b25813297e9aef7c343ce4a2a21024f4948ea14672794a16",
+      "exact_match": true
+    },
+    {
+      "path": "inspect_indicators.py",
+      "package": "03G_INDICATORS_DIAGNOSTICS.md",
+      "bytes": 7359,
+      "sha256": "c033894bee8c3be300fb31f3d574daa94f513d212a1fa3f98d8dfbd785536125",
+      "exact_match": true
+    },
+    {
+      "path": "strategies/__init__.py",
+      "package": "04_STRATEGIES_AUDIT.md",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "exact_match": true
+    },
+    {
+      "path": "strategies/first_strategy.py",
+      "package": "04_STRATEGIES_AUDIT.md",
+      "bytes": 133,
+      "sha256": "f1ebc4e02a4e55fc7f5db75e83a740b0980384b09784f7216a3b3518fc6d963c",
+      "exact_match": true
+    },
+    {
+      "path": "benchmark_engine.py",
+      "package": "04_STRATEGIES_AUDIT.md",
+      "bytes": 3683,
+      "sha256": "cd05b5f735df19d816d32ad9e155bdd8331194ec52d73322d4844f5cc1b21e34",
+      "exact_match": true
+    },
+    {
+      "path": "tests/test_backtest_models.py",
+      "package": "05A_TESTS_MODELS_COSTS_PORTFOLIO.md",
+      "bytes": 2891,
+      "sha256": "ecd084d2ca4cb1da762d3010473885569fb81f607b00e2d20c7a01d4a37b481f",
+      "exact_match": true
+    },
+    {
+      "path": "tests/test_cost_model.py",
+      "package": "05A_TESTS_MODELS_COSTS_PORTFOLIO.md",
+      "bytes": 1330,
+      "sha256": "71936c1a12518f645480ba31b6305091dfada45543440c1f374610485bb38e41",
+      "exact_match": true
+    },
+    {
+      "path": "tests/test_execution.py",
+      "package": "05A_TESTS_MODELS_COSTS_PORTFOLIO.md",
+      "bytes": 1343,
+      "sha256": "c30cbef36f5ff8f6227437f1e706d8319c45a3ba31bd9982a350bfa0161c5a60",
+      "exact_match": true
+    },
+    {
+      "path": "tests/test_portfolio.py",
+      "package": "05A_TESTS_MODELS_COSTS_PORTFOLIO.md",
+      "bytes": 1985,
+      "sha256": "d0b990946cfdb10b8d56acf7b6f705ec4e74c7965c5f78386385b9a158dafa4c",
+      "exact_match": true
+    },
+    {
+      "path": "tests/test_engine.py",
+      "package": "05B_TESTS_ENGINE_REVIEW.md",
+      "bytes": 13110,
+      "sha256": "dea2360ce920923cd6479da095fcd004997301d06c99ae903d0f13e635e84ad7",
+      "exact_match": true
+    },
+    {
+      "path": "tests/test_stage4_review.py",
+      "package": "05B_TESTS_ENGINE_REVIEW.md",
+      "bytes": 3401,
+      "sha256": "611717b706e4ff73e8a6f2a15e3d217aff2c1327517e4caf2ea0e60c081d6d0c",
+      "exact_match": true
+    },
+    {
+      "path": "tests/test_data_loader.py",
+      "package": "05C_TESTS_DATA.md",
+      "bytes": 6705,
+      "sha256": "3cc3774987d25aa1206b5c88e5603a7b743ef0a3d7a5915b8cb32edb6084930f",
+      "exact_match": true
+    },
+    {
+      "path": "tests/test_data_validator.py",
+      "package": "05C_TESTS_DATA.md",
+      "bytes": 4612,
+      "sha256": "a34c3fbebae332d582b4152c7ebc7a4e5530845e12d809381d790d953153d1a5",
+      "exact_match": true
+    },
+    {
+      "path": "tests/test_intraday_gaps.py",
+      "package": "05C_TESTS_DATA.md",
+      "bytes": 4582,
+      "sha256": "519e1e8d0a60fa174af2b8280b3921750fd0b1bd29fd3f0b3f154323ca5a0c57",
+      "exact_match": true
+    },
+    {
+      "path": "tests/test_indicators.py",
+      "package": "05D_TESTS_INDICATORS.md",
+      "bytes": 20622,
+      "sha256": "9765c5229bf05059e452eec9cb6a592fca2f6277c80783666e84adbc84dd5188",
+      "exact_match": true
+    },
+    {
+      "path": "tests/test_environment.py",
+      "package": "05E_TESTS_ENVIRONMENT.md",
+      "bytes": 759,
+      "sha256": "880c51eaf356d9be1c8f8157a2f2ecc2335b64f98cc9fc9b2d1b7ab4b164aa6f",
+      "exact_match": true
+    },
+    {
+      "path": "core/causality.py",
+      "package": "06_VALIDATION_AUDIT.md",
+      "bytes": 1945,
+      "sha256": "fe7fa61ef157e6ec5df20932e917380a144dba932e42c5f14f03af4c14b82afc",
+      "exact_match": true
+    },
+    {
+      "path": "core/metrics.py",
+      "package": "06_VALIDATION_AUDIT.md",
+      "bytes": 93,
+      "sha256": "1bda281456baf27201e2cc167010aa01b2feb35b5f107b0ed2be9e80b0412317",
+      "exact_match": true
+    }
+  ],
+  "packages": [
+    {
+      "path": "00_PROJECT_OVERVIEW.md",
+      "bytes": 14437,
+      "sha256": "8bc688847398d8da245732db6b579f05876f4de6582b0bd37cf128a26475f571"
+    },
+    {
+      "path": "00A_SOURCE_INVENTORY.md",
+      "bytes": 27531,
+      "sha256": "79b52b2dfd86cb78efc1234623bd060442a5bcb3f275c1fb1ca353dc8d391487"
+    },
+    {
+      "path": "00B_PROJECT_RULES.md",
+      "bytes": 32096,
+      "sha256": "1cfb654c4c41a83fc6e07370bbf2fcd4d70b1ffbc5b7c42d4b5b8874a59f7e1c"
+    },
+    {
+      "path": "01_CORE_AUDIT.md",
+      "bytes": 45774,
+      "sha256": "97946f9b4cde7c43f6fd82af09b8921d214df139304771b51324fd03692a177a"
+    },
+    {
+      "path": "02_DATA_AUDIT.md",
+      "bytes": 36222,
+      "sha256": "427037500d2641d3d2c404d3b54ace0ea525c5d206c2103582d2754d9697b088"
+    },
+    {
+      "path": "03_INDICATORS_AUDIT.md",
+      "bytes": 22678,
+      "sha256": "91c11410cb4d63bc1839bb4ea17b17a226f7ab19bd99ed30e3ded2a855151d41"
+    },
+    {
+      "path": "03A_INDICATORS_TREND.md",
+      "bytes": 11787,
+      "sha256": "1180a5ccc174cb91857bb5796be15cbc258c71fbb7e8c4993f6e985a9cb0649a"
+    },
+    {
+      "path": "03B_INDICATORS_MOMENTUM.md",
+      "bytes": 5952,
+      "sha256": "9a5a05b080b92ad4c1d9e8d3345292fd492f9fb01c21e56717d4b101e51bb589"
+    },
+    {
+      "path": "03C_INDICATORS_VOLATILITY.md",
+      "bytes": 5660,
+      "sha256": "461a54d0c52c578ef35bf86972cb673be6156cdf203f27310885a977c660ae33"
+    },
+    {
+      "path": "03D_INDICATORS_STRUCTURE.md",
+      "bytes": 10672,
+      "sha256": "349ca73f6f598f80fab10536668d89d59ab26455b20ad9d3564a6cdd228e9d16"
+    },
+    {
+      "path": "03E_INDICATORS_PRICE_ACTION.md",
+      "bytes": 7814,
+      "sha256": "bba2ebbec374672d76018384f93de57cd12faf3a69d809fd631193a434724424"
+    },
+    {
+      "path": "03F_INDICATORS_SESSIONS_VOLUME.md",
+      "bytes": 11362,
+      "sha256": "e4ee957f5bf234072528292ebb5e781c49d073da4b5699e8604d51dfb1980206"
+    },
+    {
+      "path": "03G_INDICATORS_DIAGNOSTICS.md",
+      "bytes": 7822,
+      "sha256": "d8c6bd1b3e43bed51fd1cc750f5c54a74e70c9898dd8d40f6cfd4f4ef3c86c0c"
+    },
+    {
+      "path": "04_STRATEGIES_AUDIT.md",
+      "bytes": 5500,
+      "sha256": "9c790d8df9351047d75edff3f881ff2ba067dd7cc8b829eb92f2af17d9ec49fd"
+    },
+    {
+      "path": "05_TESTS_AUDIT.md",
+      "bytes": 4891,
+      "sha256": "1d59fda15300c7b612ed5daad57bcb56bf9d536ea09e970920863e697e52addf"
+    },
+    {
+      "path": "05A_TESTS_MODELS_COSTS_PORTFOLIO.md",
+      "bytes": 9213,
+      "sha256": "c16b6a8ae748829253464b50240adce4a6452073c4d92cfc2a385e6ccc423f32"
+    },
+    {
+      "path": "05B_TESTS_ENGINE_REVIEW.md",
+      "bytes": 17394,
+      "sha256": "22528df8febfa7fce9f08b92d2a50b0505ed3d04beeca6ba58874a763c2b9163"
+    },
+    {
+      "path": "05C_TESTS_DATA.md",
+      "bytes": 17188,
+      "sha256": "e42ffcce71dfaa7c5bc0d7edbbf6b041593f401c1cde09d44ee365a7800fd8db"
+    },
+    {
+      "path": "05D_TESTS_INDICATORS.md",
+      "bytes": 21127,
+      "sha256": "bb537dce810792d5fddc461d4410b3c987c69c973a26feb0d31f53875bbee3df"
+    },
+    {
+      "path": "05E_TESTS_ENVIRONMENT.md",
+      "bytes": 1266,
+      "sha256": "da8ea17a7033020b114bf6350dae8115ce1095b43b4e5be75d9d5771e37c25a1"
+    },
+    {
+      "path": "06_VALIDATION_AUDIT.md",
+      "bytes": 3855,
+      "sha256": "92ffeb074c972434df66f2905408a0a5463fafc8365f9a4fe6b9fb8688154cb5"
+    },
+    {
+      "path": "07_TEST_RESULTS.md",
+      "bytes": 68427,
+      "sha256": "c090e4b30ff9f55f901b507eb49a606487e23699e7434a5f112a2f056a7b5a95"
+    },
+    {
+      "path": "08_AUDIT_HANDOFF.md",
+      "bytes": 6952,
+      "sha256": "d52bdb6f274b1f602932da62dd8e2ffff1bff588e9c0980db98c0a4bc7d4975c"
+    },
+    {
+      "path": "MANIFEST.md",
+      "bytes": 10249,
+      "sha256": "37dabcfcfb5aa45414acde0c341a6144e7818363e24ac1c5669db33b2f25cc65"
+    }
+  ]
+}

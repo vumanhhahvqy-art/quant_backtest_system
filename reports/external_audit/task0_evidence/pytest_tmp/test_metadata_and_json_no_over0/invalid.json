@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "symbol": {
+    "value": "TEST",
+    "confirmed": true,
+    "evidence": "Synthetic test fixture"
+  },
+  "source_timezone": {
+    "value": "UTC",
+    "confirmed": true,
+    "evidence": "Synthetic test fixture"
+  },
+  "timestamp_encoding": {
+    "value": "unix_ms",
+    "confirmed": true,
+    "evidence": "Synthetic test fixture"
+  },
+  "timestamp_kind": {
+    "value": "open",
+    "confirmed": true,
+    "evidence": "Synthetic test fixture"
+  },
+  "price_type": {
+    "value": "Bid",
+    "confirmed": true,
+    "evidence": "Synthetic test fixture"
+  },
+  "timeframe": {
+    "value": "1min",
+    "confirmed": true,
+    "evidence": "Synthetic test fixture"
+  },
+  "instrument_specifications": {
+    "value": {
+      "tick_size": 0.01,
+      "pip_size": 0.1,
+      "contract_size": 1,
+      "quantity_unit": "units",
+      "quote_currency": "USD",
+      "minimum_quantity_increment": 1
+    },
+    "confirmed": true,
+    "evidence": "Synthetic test fixture"
+  },
+  "volume_unit": {
+    "value": "synthetic_units",
+    "confirmed": true,
+    "evidence": "Synthetic test fixture"
+  }
+}

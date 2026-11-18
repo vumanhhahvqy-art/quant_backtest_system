@@ -1,0 +1,80 @@
+# branch.oid 7af3b774b1721e091e2527a00563912255d44702
+# branch.head main
+1 .M N... 100644 100644 100644 8d16a54f40571ce78ab93a7b04cf28f495d4ab92 8d16a54f40571ce78ab93a7b04cf28f495d4ab92 README.md
+1 .M N... 100644 100644 100644 8263a29175eb39e761b82b0d6041128cdece331d 8263a29175eb39e761b82b0d6041128cdece331d core/cost_model.py
+1 .M N... 100644 100644 100644 cfb3e46cbbff6bbc5337c784f2eda4de9ad3f01e cfb3e46cbbff6bbc5337c784f2eda4de9ad3f01e core/engine.py
+1 .M N... 100644 100644 100644 e69de29bb2d1d6434b8b29ae775ad8c2e48c5391 e69de29bb2d1d6434b8b29ae775ad8c2e48c5391 indicators/__init__.py
+1 .M N... 100644 100644 100644 a582c74b98e09496fa64ae0b4f2311a1847d85cd a582c74b98e09496fa64ae0b4f2311a1847d85cd pyproject.toml
+1 .M N... 100644 100644 100644 be3b1d3737574846a1846a25a918f50fb613a4eb be3b1d3737574846a1846a25a918f50fb613a4eb strategies/base_strategy.py
+? benchmark_engine.py
+? configs/data_pipeline.yaml
+? core/BACKTEST_ENGINE.md
+? core/causality.py
+? core/data_loader.py
+? core/data_validator.py
+? core/execution.py
+? core/models.py
+? core/portfolio.py
+? data/metadata/datasets.json
+? data/metadata/metadata_template.yaml
+? indicators/INDICATORS.md
+? indicators/_utils.py
+? indicators/market_structure.py
+? indicators/momentum.py
+? indicators/moving_averages.py
+? indicators/price_action.py
+? indicators/sessions.py
+? indicators/trend.py
+? indicators/volatility.py
+? inspect_data.py
+? inspect_indicators.py
+? reports/external_audit/00A_SOURCE_INVENTORY.md
+? reports/external_audit/00B_PROJECT_RULES.md
+? reports/external_audit/00_PROJECT_OVERVIEW.md
+? reports/external_audit/01_CORE_AUDIT.md
+? reports/external_audit/02_DATA_AUDIT.md
+? reports/external_audit/03A_INDICATORS_TREND.md
+? reports/external_audit/03B_INDICATORS_MOMENTUM.md
+? reports/external_audit/03C_INDICATORS_VOLATILITY.md
+? reports/external_audit/03D_INDICATORS_STRUCTURE.md
+? reports/external_audit/03E_INDICATORS_PRICE_ACTION.md
+? reports/external_audit/03F_INDICATORS_SESSIONS_VOLUME.md
+? reports/external_audit/03G_INDICATORS_DIAGNOSTICS.md
+? reports/external_audit/03_INDICATORS_AUDIT.md
+? reports/external_audit/04_STRATEGIES_AUDIT.md
+? reports/external_audit/05A_TESTS_MODELS_COSTS_PORTFOLIO.md
+? reports/external_audit/05B_TESTS_ENGINE_REVIEW.md
+? reports/external_audit/05C_TESTS_DATA.md
+? reports/external_audit/05D_TESTS_INDICATORS.md
+? reports/external_audit/05E_TESTS_ENVIRONMENT.md
+? reports/external_audit/05_TESTS_AUDIT.md
+? reports/external_audit/06_VALIDATION_AUDIT.md
+? reports/external_audit/07_TEST_RESULTS.md
+? reports/external_audit/08_AUDIT_HANDOFF.md
+? reports/external_audit/09_FINAL_AUDIT_INPUT.md
+? reports/external_audit/CLAUDE_AUDIT_CORE.md
+? reports/external_audit/CLAUDE_AUDIT_DATA.md
+? reports/external_audit/CLAUDE_AUDIT_INDICATORS.md
+? reports/external_audit/CLAUDE_AUDIT_INTEGRATION.md
+? reports/external_audit/CLAUDE_AUDIT_STRATEGIES.md
+? reports/external_audit/MANIFEST.md
+? reports/external_audit/OPUS_AUDIT_INTEGRATION.md
+? reports/external_audit/PHAN_QUYET_CHUNG_KIEM_TOAN_QUANT_BACKTEST.md
+? reports/external_audit/audit_evidence.py
+? reports/external_audit/baseline.json
+? reports/external_audit/build_audit.py
+? reports/external_audit/evidence.json
+? reports/external_audit/final_verification.json
+? reports/external_audit/package_verification.json
+? reports/external_audit/pytest_results.xml
+? reports/external_audit/task0_verification.py
+? tests/test_backtest_models.py
+? tests/test_cost_model.py
+? tests/test_data_loader.py
+? tests/test_data_validator.py
+? tests/test_engine.py
+? tests/test_execution.py
+? tests/test_indicators.py
+? tests/test_intraday_gaps.py
+? tests/test_portfolio.py
+? tests/test_stage4_review.py

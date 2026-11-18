@@ -1,0 +1,2 @@
+🚀 Hệ thống Quant Backtest MVP đã sẵn sàng!
+Thư mục làm việc hiện tại: C:\Users\Admin\Documents\quant_backtest_system

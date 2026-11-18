@@ -1,0 +1,13 @@
+{
+  "checked_utc": "2026-11-17T09:37:57.038386+00:00",
+  "source_hashes_verified": 54,
+  "package_hashes_verified": 24,
+  "verbatim_blocks_verified": 54,
+  "audit_helper_scripts_compile": true,
+  "git_unchanged_outside_audit": true,
+  "data_files_size_mtime_verified": 1435,
+  "data_file_list_unchanged": true,
+  "historical_data_not_fully_hashed": true,
+  "issues": [],
+  "markdown_total_bytes": 405869
+}

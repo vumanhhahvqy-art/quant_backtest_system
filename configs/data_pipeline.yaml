@@ -1,0 +1,8 @@
+# Paths are relative to the project root, not the shell working directory.
+registry: data/metadata/datasets.json
+raw_directory: data/raw
+metadata_directory: data/metadata
+output_directory: data/processed
+report_directory: reports/runs
+# Every CSV in data/raw is inspected and exported automatically.
+diagnostic: true

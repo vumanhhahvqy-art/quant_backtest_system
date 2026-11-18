@@ -1,0 +1,27 @@
+{
+  "python": "3.15.2",
+  "platform": "Windows-10-10.0.19045-SP0",
+  "pandas": "3.1.1",
+  "numpy": "2.5.5",
+  "repeats": 1,
+  "measurements": [
+    {
+      "bars": 100,
+      "outputs_identical": true,
+      "median_seconds": {
+        "BatchMean": 0.0548071999946842,
+        "IncrementalMean": 0.02895859999989625
+      },
+      "speedup": 1.8926053053283154
+    },
+    {
+      "bars": 1000,
+      "outputs_identical": true,
+      "median_seconds": {
+        "BatchMean": 0.5031335000094259,
+        "IncrementalMean": 0.26823220000369474
+      },
+      "speedup": 1.8757386324330023
+    }
+  ]
+}

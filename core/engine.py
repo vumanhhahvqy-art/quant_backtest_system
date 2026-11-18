@@ -1,1 +1,229 @@
-"""Bộ máy khớp lệnh trung tâm, quản lý vị thế và cập nhật biến động số dư (Equity Curve)."""
+"""Chronological single-instrument backtest with prefix-only strategy input."""
+
+from __future__ import annotations
+
+from copy import deepcopy
+from dataclasses import dataclass
+import logging
+from typing import Any
+
+import numpy as np
+import pandas as pd
+
+from core.cost_model import CostModel
+from core.data_validator import validate_data
+from core.execution import protective_exit
+from core.models import AccountState, Fill, Instrument, Order, Position, Trade, positive
+from core.portfolio import Portfolio
+from strategies.base_strategy import BaseStrategy
+
+LOGGER = logging.getLogger(__name__)
+
+
+@dataclass(frozen=True)
+class BacktestResult:
+    """In-memory hypothetical outputs; open positions are not force-liquidated."""
+
+    orders: tuple[Order, ...]
+    fills: tuple[Fill, ...]
+    trades: tuple[Trade, ...]
+    states: tuple[AccountState, ...]
+    events: tuple[dict[str, Any], ...]
+    open_position: Position | None
+    assumptions: dict[str, Any]
+
+
+class ConversionRates:
+    """Historical quote-to-account rates: account currency per one quote unit.
+
+    Use the latest published rate at or before the event. No backfilling from
+    future observations. Intrabar events conservatively use the bar-open rate.
+    """
+
+    def __init__(self, quote_currency: str, account_currency: str,
+                 rates: pd.Series | None) -> None:
+        if not account_currency:
+            raise ValueError("account_currency is required.")
+        self.identity = quote_currency == account_currency
+        if not self.identity and rates is None:
+            raise ValueError("Historical quote-to-account conversion rates are required.")
+        self.rates = None if rates is None else rates.copy(deep=True)
+        if rates is not None:
+            index = rates.index
+            if (not isinstance(index, pd.DatetimeIndex) or str(index.tz) != "UTC"
+                    or index.hasnans or not index.is_unique or not index.is_monotonic_increasing
+                    or rates.empty or not pd.api.types.is_numeric_dtype(rates)
+                    or not np.isfinite(rates).all() or not (rates > 0).all()):
+                raise ValueError("Conversion rates must be positive, finite, ordered unique UTC observations.")
+
+    def at(self, timestamp: pd.Timestamp) -> float:
+        if self.identity:
+            return 1.0
+        offset = self.rates.index.searchsorted(timestamp, side="right") - 1
+        if offset < 0:
+            raise ValueError(f"No conversion rate available at {timestamp}.")
+        return float(self.rates.iloc[offset])
+
+
+class BacktestEngine:
+    """Coordinate execution, costs and accounting without strategy-specific rules."""
+
+    def __init__(self, metadata: dict[str, Any], costs: CostModel, *,
+                 initial_capital: float, account_currency: str, quantity: float) -> None:
+        self.metadata = deepcopy(metadata)
+        self.instrument = Instrument.from_metadata(self.metadata)
+        self.instrument.units(quantity)
+        positive(initial_capital, "initial_capital")
+        if not account_currency:
+            raise ValueError("account_currency is required.")
+        self.costs = costs
+        self.initial_capital = initial_capital
+        self.account_currency = account_currency
+        self.quantity = quantity
+
+    def run(self, data: pd.DataFrame, strategy: BaseStrategy, *,
+            expected_timestamps: pd.DatetimeIndex | None = None,
+            conversion_rates: pd.Series | None = None) -> BacktestResult:
+        """Evaluate after close, execute on next available bar open.
+
+        Without expected timestamps, intraday gaps warn and cross-day gaps are
+        ignored. An optional schedule must come from an independent calendar.
+        All input rows are checked before simulation; none are silently filled.
+        Strategies receive copies of completed prefixes, never future rows.
+        """
+        report = validate_data(data, self.metadata, expected_timestamps=expected_timestamps)
+        if report["errors"] or report["metadata_blockers"]:
+            raise ValueError(f"Data is not simulation-ready: {report}")
+        if not data.columns.is_unique:
+            raise ValueError("Duplicate data columns are unsupported.")
+        columns = ["open", "high", "low", "close"]
+        if any(not pd.api.types.is_numeric_dtype(data[c]) for c in columns):
+            raise ValueError("OHLC columns must have numeric dtypes.")
+        frame = data.copy(deep=True)
+        history_limit = strategy.signal_history_limit
+        if history_limit is not None and (
+            isinstance(history_limit, bool) or not isinstance(history_limit, int) or history_limit < 1
+        ):
+            raise ValueError("signal_history_limit must be a positive integer or None.")
+        duration = pd.Timedelta(self.metadata["timeframe"]["value"])
+        is_open = self.metadata["timestamp_kind"]["value"] == "open"
+        openings = frame.index if is_open else frame.index - duration
+        closings = frame.index + duration if is_open else frame.index
+        if len(frame) > 1 and (openings[1:] < closings[:-1]).any():
+            raise ValueError("Overlapping candles are unsupported.")
+        rates = ConversionRates(self.instrument.quote_currency, self.account_currency, conversion_rates)
+        portfolio = Portfolio(self.instrument, self.initial_capital)
+        orders: list[Order] = []
+        fills: list[Fill] = []
+        states: list[AccountState] = []
+        events: list[dict[str, Any]] = []
+        pending: Order | None = None
+        price_type = self.metadata["price_type"]["value"]
+        LOGGER.info("Starting hypothetical simulation: %s, %d bars", self.instrument.symbol, len(frame))
+
+        def make_fill(order_id, side, quantity, price, timestamp, rate, reason,
+                      ambiguous=False, timing="open"):
+            return self.costs.fill(instrument=self.instrument, order_id=order_id,
+                                   timestamp=timestamp, side=side, quantity=quantity,
+                                   price=price, conversion_rate=rate, reason=reason,
+                                   ambiguous=ambiguous, timing=timing)
+
+        for i in range(len(frame)):
+            opening, closing = openings[i], closings[i]
+            rate = rates.at(opening)
+            bar = {c: float(frame.iloc[i][c]) for c in columns}
+            if pending is not None:
+                order, pending = pending, None
+                if opening < order.submitted_at:
+                    raise ValueError("Order cannot fill before submission.")
+                position = portfolio.position
+                rejection = None
+                if order.action == "EXIT" and position is None:
+                    rejection = "no_open_position"
+                elif order.action != "EXIT" and position is not None:
+                    rejection = "position_already_open"
+                if rejection is None:
+                    side = (-position.direction if order.action == "EXIT"
+                            else 1 if order.action == "BUY" else -1)
+                    quantity = position.quantity if order.action == "EXIT" else order.quantity
+                    price = self.costs.side_bar(bar, price_type, side)["open"]
+                    fill = make_fill(order.order_id, side, quantity, price, opening, rate, order.action)
+                    if order.action == "EXIT":
+                        portfolio.close(fill, rate)
+                    else:
+                        try:
+                            portfolio.open(order, fill, rate)
+                        except ValueError as exc:
+                            rejection = str(exc)
+                    if rejection is None:
+                        fills.append(fill)
+                events.append({"order_id": order.order_id, "timestamp": opening,
+                               "status": "rejected" if rejection else "filled",
+                               "reason": rejection or order.action})
+            position = portfolio.position
+            if position is not None:
+                side = -position.direction
+                executable = self.costs.side_bar(bar, price_type, side)
+                decision = protective_exit(position, executable)
+                if decision is not None:
+                    # For intrabar events opening identifies the containing candle.
+                    fill = make_fill(position.entry.order_id, side, position.quantity,
+                                     decision.price, opening, rate, decision.reason,
+                                     decision.ambiguous, decision.timing)
+                    portfolio.close(fill, rate)
+                    fills.append(fill)
+                    events.append({"timestamp": opening, "status": "protective_exit",
+                                   "reason": decision.reason, "ambiguous": decision.ambiguous,
+                                   "timing": decision.timing, "order_id": fill.order_id})
+            position = portfolio.position
+            mark_side = -position.direction if position else -1
+            mark = self.costs.side_bar(bar, price_type, mark_side)["close"]
+            states.append(portfolio.mark(closing, mark, rates.at(closing)))
+            if states[-1].equity < 0 or portfolio.balance < 0:
+                events.append({"timestamp": closing, "status": "insolvent",
+                               "reason": "negative_equity_or_balance_after_market_loss"})
+                LOGGER.warning("Simulated account insolvency at %s", closing)
+            start = 0 if history_limit is None else max(0, i + 1 - history_limit)
+            prefix = frame.iloc[start:i + 1].copy(deep=True)
+            row = strategy.generate_signal(prefix)
+            if not isinstance(row, pd.Series) or not row.index.is_unique or "signal" not in row:
+                raise ValueError("Strategy must return a signal Series including signal.")
+            signal = row["signal"]
+            if pd.isna(signal) or signal not in (-1, 0, 1):
+                raise ValueError("signal must be -1, 0 or 1; warm-up must emit 0.")
+            exit_signal = row.get("exit", False)
+            if not isinstance(exit_signal, (bool, np.bool_)):
+                raise ValueError("exit must be boolean.")
+            if exit_signal and signal != 0:
+                raise ValueError("EXIT and entry cannot be submitted together.")
+            if signal != 0 or exit_signal:
+                def level(name):
+                    value = row.get(name)
+                    return None if value is None or pd.isna(value) else float(value)
+                action = "EXIT" if exit_signal else "BUY" if signal == 1 else "SELL"
+                pending = Order(len(orders) + 1, action, self.quantity, closing,
+                                level("sl") if not exit_signal else None,
+                                level("tp") if not exit_signal else None)
+                orders.append(pending)
+                events.append({"order_id": pending.order_id, "timestamp": closing,
+                               "status": "submitted", "reason": action})
+        if pending is not None:
+            events.append({"order_id": pending.order_id, "timestamp": closings[-1],
+                           "status": "unfilled", "reason": "end_of_data"})
+        LOGGER.info("Simulation complete: %d fills, %d closed trades", len(fills), len(portfolio.trades))
+        return BacktestResult(tuple(orders), tuple(fills), tuple(portfolio.trades),
+                              tuple(states), tuple(events), portfolio.position, {
+                                  "hypothetical": True, "metadata": deepcopy(self.metadata),
+                                  "costs": self.costs, "quantity": self.quantity,
+                                  "initial_capital": self.initial_capital,
+                                  "account_currency": self.account_currency,
+                                  "execution": "next_available_bar_open",
+                                  "ambiguity": "stop_loss_first",
+                                  "collateral": "full_entry_notional_no_leverage",
+                                  "conversion": "latest_published_rate; intrabar uses open rate",
+                                  "warnings": report["warnings"],
+                                  "gap_check_mode": report["gap_check_mode"],
+                                  "intraday_gap_check_passed": report["intraday_gap_check_passed"],
+                                  "full_calendar_verified": report["full_calendar_verified"],
+                                  "interval_analysis": deepcopy(report["interval_analysis"]),
+                                  "open_positions": "marked_to_close_not_forced_closed"})

@@ -1,0 +1,69 @@
+{
+  "paths": {
+    "data/raw/task0_probe.csv": {
+      "exit_code": 0,
+      "rule": ".gitignore:9:data/raw/*\tdata/raw/task0_probe.csv"
+    },
+    "data/raw/nested/task0_probe.csv": {
+      "exit_code": 0,
+      "rule": ".gitignore:9:data/raw/*\tdata/raw/nested/task0_probe.csv"
+    },
+    "data/processed/task0_probe.parquet": {
+      "exit_code": 0,
+      "rule": ".gitignore:10:data/processed/*\tdata/processed/task0_probe.parquet"
+    },
+    "reports/runs/task0_probe.json": {
+      "exit_code": 0,
+      "rule": ".gitignore:11:reports/runs/*\treports/runs/task0_probe.json"
+    },
+    ".venv/Scripts/python.exe": {
+      "exit_code": 0,
+      "rule": ".gitignore:2:.venv/\t.venv/Scripts/python.exe"
+    },
+    "venv/x": {
+      "exit_code": 0,
+      "rule": ".gitignore:3:venv/\tvenv/x"
+    },
+    ".env": {
+      "exit_code": 0,
+      "rule": ".gitignore:17:.env\t.env"
+    },
+    ".env.local": {
+      "exit_code": 0,
+      "rule": ".gitignore:32:.env.*\t.env.local"
+    },
+    "private.key": {
+      "exit_code": 0,
+      "rule": ".gitignore:35:*.key\tprivate.key"
+    },
+    "private.pem": {
+      "exit_code": 0,
+      "rule": ".gitignore:34:*.pem\tprivate.pem"
+    },
+    "secrets.json": {
+      "exit_code": 1,
+      "rule": ""
+    },
+    "credentials.json": {
+      "exit_code": 1,
+      "rule": ""
+    },
+    "api_keys.yaml": {
+      "exit_code": 1,
+      "rule": ""
+    },
+    "secrets/token.txt": {
+      "exit_code": 1,
+      "rule": ""
+    },
+    ".env.example": {
+      "exit_code": 0,
+      "rule": ".gitignore:33:!.env.example\t.env.example"
+    }
+  },
+  "tracked_sensitive_path_candidates": [
+    "data/raw/.gitkeep"
+  ],
+  "credential_pattern_candidates_no_values": [],
+  "scan_scope": "tracked and nonignored untracked text <=2MB, excluding audit evidence; heuristic, not proof of absence"
+}
